@@ -9,7 +9,12 @@ import aleatoirePage from "../pages/aleatoirePage"
   return false
 })
  describe("testing home page", () => {
-   it("should visit home page", () => {
+   it("should visit site", () => {
+    home.visit();
+    home.getAleatoireLink().click();
+
+  })
+   it("should check icons", () => {
      home.visit();
      home.getAleatoireLink().click();
      aleatoire.getFacebookButton().should('exist');
@@ -17,6 +22,7 @@ import aleatoirePage from "../pages/aleatoirePage"
      aleatoire.getTumblrButton().should('exist');
 
    })
+  
   
    
  })
